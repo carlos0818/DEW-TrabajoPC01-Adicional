@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Lastfm::Application.config.secret_token = 'f4263aeba547e5f1c71e13278cb7f6a6112bc29787f64b23807f25c6706d799bf40bd37136c176037d549a37ebb7ed70dbea3fc4f3e5737678b242e91a173479'
+Music::Application.config.secret_token = 'f9cd87f11919b3799a82a8fc52fed0468415e046fe64b1a79598a2a581c4e8437227d070559d31b49938d5671afcfe2bf790db4c8a9d60d86e770123f7d1d914'
