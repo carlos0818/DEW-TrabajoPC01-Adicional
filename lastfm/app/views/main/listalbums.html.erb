@@ -1,31 +1,27 @@
 <%= render 'formlistalbums' %>
 
 <h1> Lista Albumes </h1>
+<% @album.each  do |alb| %>
+    <% @hasta = alb[1]['opensearch:itemsPerPage'] %>
+<% end %> 
+<% @hasta.to_i %>
 <table >
   <tr>
     <th>.:: Img ::.</th>
     <th>.:: Album ::.</th>
     <th>.:: Artista ::.</th>
   </tr>
-<% ddd=0 %>
-<% @album.each  do |alb| %>
-   <%= @hasta = alb[1]['opensearch:totalResults'] %>
-<% end %> 
-<%= @hasta %>
-<% for ddd in 0..5 %>
- <% @album.each  do |alb| %>
+<% i = 0 %>
+<% num = @hasta.to_i %>
+<% begin %>
+  <% @album.each  do |alb| %>
    <tr>     
-    <td><img src="<%= alb[1]['albummatches']['album'][ddd]['image'][0]['#text'] %>"  WIDTH=60 HEIGHT=80 /></td>
-    <td><%= alb[1]['albummatches']['album'][ddd]['name'] %></td>
-    <td><%= alb[1]['albummatches']['album'][ddd]['artist'] %></td>
-    
-    <% ddd= ddd + 1 %>
+    <td><img src="<%= alb[1]['albummatches']['album'][i]['image'][0]['#text'] %>"  WIDTH=60 HEIGHT=80 /></td>
+    <td><%= alb[1]['albummatches']['album'][i]['name'] %></td>
+    <td><%= alb[1]['albummatches']['album'][i]['artist'] %></td>    
   </tr>
    <% end %> 
-<%   end %>
+<% i +=1 %>
+<% end while i < num %>
 </table>
-
 <%= "Hay " + @hasta + " registros encontrados" %>
-
-
-

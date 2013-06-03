@@ -10,7 +10,6 @@ class MainController < ApplicationController
     #token = params[:token]
     #@album = LastFM::Album.search(:album => "Mother's Milk")  
      @album = LastFM::Album.search(:album =>  param_1)    
-
      #redirect_to listalbum_path and return if !token || token == ""
      respond_to do |format|
        format.html
