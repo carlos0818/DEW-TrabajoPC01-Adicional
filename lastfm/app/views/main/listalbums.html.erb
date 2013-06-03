@@ -1,0 +1,31 @@
+<%= render 'formlistalbums' %>
+
+<h1> Lista Albumes </h1>
+<table >
+  <tr>
+    <th>.:: Img ::.</th>
+    <th>.:: Album ::.</th>
+    <th>.:: Artista ::.</th>
+  </tr>
+<% ddd=0 %>
+<% @album.each  do |alb| %>
+   <%= @hasta = alb[1]['opensearch:totalResults'] %>
+<% end %> 
+<%= @hasta %>
+<% for ddd in 0..5 %>
+ <% @album.each  do |alb| %>
+   <tr>     
+    <td><img src="<%= alb[1]['albummatches']['album'][ddd]['image'][0]['#text'] %>"  WIDTH=60 HEIGHT=80 /></td>
+    <td><%= alb[1]['albummatches']['album'][ddd]['name'] %></td>
+    <td><%= alb[1]['albummatches']['album'][ddd]['artist'] %></td>
+    
+    <% ddd= ddd + 1 %>
+  </tr>
+   <% end %> 
+<%   end %>
+</table>
+
+<%= "Hay " + @hasta + " registros encontrados" %>
+
+
+

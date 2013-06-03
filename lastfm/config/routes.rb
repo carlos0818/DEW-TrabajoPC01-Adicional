@@ -1,7 +1,9 @@
 Music::Application.routes.draw do
+  require 'lastfm-client'
 
   get   '/login', :to => 'sessions#new', :as => :login
   match '/home', :to => 'main#home'
+  match 'listalbum', :to => 'main#listalbums'
 
 
   # The priority is based upon order of creation:

@@ -1,0 +1,12 @@
+<%= form_tag({ :action => :listalbums, }, { :method => :post })  do %>
+<p id="notice"><%= notice %></p>  
+   <div class="field">
+   	   <%= label_tag :Albumnes  %>
+   	   <%= text_field_tag :txtbuscar %>
+   </div>
+   <div class="actions">
+     <%= submit_tag "Search ..." %>
+   </div>
+
+<%end %>
+
