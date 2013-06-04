@@ -17,6 +17,14 @@ function buscarAlbum(){
 	location.href="http://127.0.0.1:3000/listalbum?album=" + $('#txtbuscar').val();
 }
 
+function buscarArtista(){
+	location.href="http://127.0.0.1:3000/listartist?artist=" + $('#txtbuscar').val();
+}
+
 function buscarTrack(){
 	location.href="http://127.0.0.1:3000/listTrack?track=" + $('#txtbuscar').val();
+}
+
+function buscarArtista(){
+	location.href="http://127.0.0.1:3000/listartistasimilares?artist=" + $('#txtbuscar').val();
 }
