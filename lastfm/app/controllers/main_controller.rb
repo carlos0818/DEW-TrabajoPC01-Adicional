@@ -18,7 +18,6 @@ class MainController < ApplicationController
     
   end
 
-<<<<<<< HEAD
 def listartists()
     param_1 = params[:artist] 
     if param_1 == nil
@@ -28,7 +27,9 @@ def listartists()
      respond_to do |format|
        format.html
        format.xml  {render :xml => @artist.to_xml(:root => :artist)}
-=======
+    end
+  end
+
   def listTracks()
     param_1 = params[:track] 
     if param_1 == nil
@@ -41,7 +42,6 @@ def listartists()
      respond_to do |format|
        format.html
        format.xml  {render :xml => @track.to_xml(:root => :track)}
->>>>>>> 4de87d22c70c8b0a9ab0bcefad1af370b81ab674
      end
     
   end
