@@ -13,3 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+function buscarAlbum(){
+	location.href="http://127.0.0.1:3000/listalbum?album=" + $('#txtbuscar').val();
+}
