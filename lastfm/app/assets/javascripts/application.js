@@ -17,6 +17,11 @@ function buscarAlbum(){
 	location.href="http://127.0.0.1:3000/listalbum?album=" + $('#txtbuscar').val();
 }
 
+<<<<<<< HEAD
 function buscarArtista(){
 	location.href="http://127.0.0.1:3000/listartist?artist=" + $('#txtbuscar').val();
+=======
+function buscarTrack(){
+	location.href="http://127.0.0.1:3000/listTrack?track=" + $('#txtbuscar').val();
+>>>>>>> 4de87d22c70c8b0a9ab0bcefad1af370b81ab674
 }

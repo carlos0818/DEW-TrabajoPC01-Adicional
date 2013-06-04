@@ -4,7 +4,11 @@ Music::Application.routes.draw do
   get   '/login', :to => 'sessions#new', :as => :login
   match '/home', :to => 'main#home'
   match 'listalbum', :to => 'main#listalbums'
+<<<<<<< HEAD
   match 'listartist', :to => 'main#listartists'
+=======
+  match 'listTrack', :to => 'main#listTracks'
+>>>>>>> 4de87d22c70c8b0a9ab0bcefad1af370b81ab674
 
 
   # The priority is based upon order of creation:
