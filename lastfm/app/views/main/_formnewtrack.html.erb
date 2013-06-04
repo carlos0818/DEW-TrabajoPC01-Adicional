@@ -1,0 +1,17 @@
+<h1>Crear Track</h1>
+
+<%= form_tag  main_path, method: :create do %>
+<p id="notice"><%= notice %></p>  
+   <div class="field">
+   	   <%= label_tag :Artist %> <br />
+   	   <%= text_field_tag :artistname %>
+   </div>
+   <div class="field">
+   	   <%= label_tag :Track %> <br />
+   	   <%= text_field_tag :trackname %>
+   </div>
+   <div class="actions">
+     <%= submit_tag "Crear" %>
+   </div>
+
+<%end %>

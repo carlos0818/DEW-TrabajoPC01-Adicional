@@ -30,6 +30,15 @@ class MainController < ApplicationController
      respond_to do |format|
        format.html
        format.xml  {render :xml => @track.to_xml(:root => :track)}
+     end  
+  end
+
+  def create
+    @newtrack = LastFM::Track.add_tags(:artist => params[:artistname], :track => params[:trackname],:tags => "JoAiquipa", :api_key => LastFM.api_key ,:api_sig => false, :sk => session[:session_key])
+     #redirect_to listalbum_path and return if !token || token == ""
+     respond_to do |format|
+       format.html
+       format.xml  {render :xml => @track.to_xml(:root => :track)}
      end
     
   end
