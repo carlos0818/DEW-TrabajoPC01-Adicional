@@ -18,6 +18,18 @@ class MainController < ApplicationController
     
   end
 
+def listartists()
+    param_1 = params[:artist] 
+    if param_1 == nil
+       param_1=  "The Rolling Stones"      
+    end
+     @artist = LastFM::Artist.get_info(:artist =>  param_1)    
+     respond_to do |format|
+       format.html
+       format.xml  {render :xml => @artist.to_xml(:root => :artist)}
+    end
+  end
+
   def listTracks()
     param_1 = params[:track] 
     if param_1 == nil
