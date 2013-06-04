@@ -1,0 +1,21 @@
+<input type="text" id="txtbuscar" />
+<input type="button" value="Buscar Artista" onclick="buscarArtista();" />
+
+<h1> Lista Artistas </h1>
+
+<table >
+  <tr>
+    <th>.:: Artista ::.</th>
+  </tr>
+
+<% i = 0 %>
+<% num = 5 %>
+<% begin %>
+  <% @artistas.each  do |alb| %>
+   <tr>     
+    <td><%= alb[1]['artist'][i]['name'] %></td>
+  </tr>
+   <% end %> 
+<% i +=1 %>
+<% end while i < num %>
+</table>
